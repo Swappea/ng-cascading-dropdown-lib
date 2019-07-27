@@ -1,6 +1,13 @@
 {
   "name": "ng-cascading-dropdown-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "This library is used to create Cascading Dropdown Library using Angular 8",
+  "license" : "MIT",
+  "keywords" :["Angular","Library", "Cascading Dropdonwn", "Dropdown", "Angular Cascading Dropdown", "ng-cascading"],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Swappea/ng-cascading-dropdown-lib/"
+  },
   "peerDependencies": {
     "@angular/common": "^8.0.3",
     "@angular/core": "^8.0.3"
