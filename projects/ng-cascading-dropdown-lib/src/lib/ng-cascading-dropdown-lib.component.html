@@ -1,0 +1,17 @@
+<ng-container *ngIf="dropDownCounter.length > 0">
+    <div class="parent-container">
+        <div *ngFor="let dropDownData of dropDownCounter; let i =index;" class="dropdown-container">
+            <select [disabled]="disableDropdown" name="dropdown" class="w-100" [ngModel]="dropdownValue[i]"
+                (ngModelChange)="onDropdownChange($event, i)">
+                <ng-container *ngIf="showDefaultSelection">
+                    <option value="default">
+                        {{ defaultSelectionData[i] }}
+                    </option>
+                </ng-container>
+                <option [ngValue]="data" *ngFor="let data of dropDownData; let i=index;">
+                    {{ data.grpName }}
+                </option>
+            </select>
+        </div>
+    </div>
+</ng-container>
