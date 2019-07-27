@@ -160,8 +160,8 @@ The following list of settings are supported by the component. Configure the set
 
 | Setting              | Type    | Description                                                  | Default Value |
 | :------------------- | :------ | :----------------------------------------------------------- | :------------ |
-| inputCascadingData   | Array   | Input Data for cascading dropdown                            | []            |
-| defaultSelectionData | Array   | Text to be show in the dropdown, when no items are selected. | []            |
+| inputCascadingData   | Array   | Input Data for cascading dropdown                            | [ ]            |
+| defaultSelectionData | Array   | Text to be show in the dropdown, when no items are selected. | [ ]            |
 | showDefaultSelection | Boolean | Show the default text for Dropdown                           | false         |
 | disableDropdown      | Boolean | Disable the Cascading Dropdown                               | false         |
 
