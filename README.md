@@ -22,6 +22,9 @@ Angular 8 Cascading Dropdown Component for web applications. Dynamic and easy to
 - Install the package :
   `npm install ng-cascading-dropdown-lib`
 
+### Demo Url
+https://swappea.github.io/ng-cascading-dropdown-lib/
+
 ### Usage
 
 Import `NgCascadingDropdownLibModule` into `NgModule` in `app.module.ts`. Angular's `FormsModule` is also required.
@@ -160,8 +163,8 @@ The following list of settings are supported by the component. Configure the set
 
 | Setting              | Type    | Description                                                  | Default Value |
 | :------------------- | :------ | :----------------------------------------------------------- | :------------ |
-| inputCascadingData   | Array   | Input Data for cascading dropdown                            | [ ]            |
-| defaultSelectionData | Array   | Text to be show in the dropdown, when no items are selected. | [ ]            |
+| inputCascadingData   | Array   | Input Data for cascading dropdown                            | [ ]           |
+| defaultSelectionData | Array   | Text to be show in the dropdown, when no items are selected. | [ ]           |
 | showDefaultSelection | Boolean | Show the default text for Dropdown                           | false         |
 | disableDropdown      | Boolean | Disable the Cascading Dropdown                               | false         |
 
