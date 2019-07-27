@@ -10,6 +10,10 @@ Angular 8 Cascading Dropdown Component for web applications. Dynamic and easy to
 
 ##### 3. Usage
 
+##### 4. Settings
+
+##### 5. Events
+
 ## Getting Started
 
 ### Installation
@@ -37,15 +41,17 @@ import { FormsModule } from '@angular/forms';
 
 ```
 
+Declare the component data variables and default options in your component where you want to consume the dropdown component.
+
 ```js
 import { Component, OnInit } from "@angular/core";
 
 export class AppComponent implements OnInit {
-  dropdownList = [];
-  selectedItems = [];
-  dropdownSettings = {};
+  defaultTestData = [];
+  defaultDropdownData = [];
+
   ngOnInit() {
-    this.dropdownList = [
+    this.defaultTestData = [
       {
         id: 1,
         grpName: "Asia",
@@ -118,18 +124,18 @@ export class AppComponent implements OnInit {
       }
     ];
 
-    defaulDropdownData = [
+    defaultDropdownData = [
       "Select Continent",
       "Select Country",
       "Select State",
       "Select City"
     ];
   }
-  onDropdownSelection(event) {
+  notifyFinalDropDownValue(event) {
     console.log("FINAL VALUE", event);
   }
 
-  notifySelections(event) {
+  notifyDropDownValue(event) {
     console.log("ALL SELECTIONS", event);
   }
 }
@@ -139,11 +145,37 @@ Add the following component tag in you template
 
 ```html
 <ng-cascading-dropdown
-  [inputCascadingData]="testData"
-  [defaultSelectionData]="defaulTestData"
+  [inputCascadingData]="defaultTestData"
+  [defaultSelectionData]="defaultDropdownData"
   [showDefaultSelection]="true"
-  (notifyDropDownValue)="notifySelections($event)"
-  (notifyFinalDropDownValue)="onDropdownSelection($event)"
+  (notifyDropDownValue)="notifyDropDownValue($event)"
+  (notifyFinalDropDownValue)="notifyFinalDropDownValue($event)"
 >
 </ng-cascading-dropdown>
 ```
+
+### Settings
+
+The following list of settings are supported by the component. Configure the settings to meet your requirement.
+
+| Setting              | Type    | Description                                                  | Default Value |
+| :------------------- | :------ | :----------------------------------------------------------- | :------------ |
+| inputCascadingData   | Array   | Input Data for cascading dropdown                            | []            |
+| defaultSelectionData | Array   | Text to be show in the dropdown, when no items are selected. | []            |
+| showDefaultSelection | Boolean | Show the default text for Dropdown                           | false         |
+| disableDropdown      | Boolean | Disable the Cascading Dropdown                               | false         |
+
+### Events
+
+- `notifyDropDownValue` - Returns all the selections for all dropdown
+  Example : (notifyDropDownValue)="notifyDropDownValue(\$event)"
+- `notifyFinalDropDownValue` - Return the final selected item
+  Example : (notifyFinalDropDownValue)="notifyFinalDropDownValue(\$event)"
+
+## Run locally
+
+- Clone the repository or downlod the .zip,.tar files.
+- Run `npm install`
+- Run `ng serve` for a dev server
+- Navigate to `http://localhost:4200/`
+  The app will automatically reload if you change any of the source files.
