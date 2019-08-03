@@ -4,14 +4,14 @@ Angular 8 Cascading Dropdown Component for web applications. Dynamic and easy to
 
 ## Table of Contents
 
-- [Getting Started](#gettingstarted)
+- [Getting Started](#getting-started)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Input JSON Format](#inputjsonformat)
+- [Input JSON Format](#input-json-format)
 - [Settings](#settings)
 - [Events](#events)
-- [Run locally](#runlocally)
-- [Change Logs](#changelogs)
+- [Run locally](#run-locally)
+- [Change Logs](#change-Logs)
 
 ## Getting Started
 
