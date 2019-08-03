@@ -1,7 +1,17 @@
-<ng-cascading-dropdown 
-                            [inputCascadingData]="testData" 
-                            [defaultSelectionData]="defaulTestData" 
-                            [showDefaultSelection]="true" 
-                            (notifyDropDownValue)="notifyDropDownValue($event)"
-                            (notifyFinalDropDownValue)="notifyFinalDropDownValue($event)">
+<!-- Horizontal Dropdown -->
+<h1>Horizontal Dropdown</h1>
+<ng-cascading-dropdown [inputCascadingData]="testData" [defaultSelectionData]="defaulTestData"
+    [showDefaultSelection]="true" (notifyDropDownValue)="notifyDropDownValue($event)"
+    (notifyFinalDropDownValue)="notifyFinalDropDownValue($event)">
 </ng-cascading-dropdown>
+
+<p>Final Value: {{finalName}}</p>
+
+<!-- Verical Dropdown -->
+<h1>Verical Dropdown</h1>
+<ng-cascading-dropdown [inputCascadingData]="testData" [defaultSelectionData]="defaulTestData"
+    [showDefaultSelection]="true" [showHorizontal]="false" (notifyDropDownValue)="notifyVDropDownValue($event)"
+    (notifyFinalDropDownValue)="notifyVFinalDropDownValue($event)">
+</ng-cascading-dropdown>
+
+<p>Final Value: {{finalVName}}</p>

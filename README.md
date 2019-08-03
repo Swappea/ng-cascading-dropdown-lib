@@ -4,15 +4,14 @@ Angular 8 Cascading Dropdown Component for web applications. Dynamic and easy to
 
 ## Table of Contents
 
-##### 1. Getting Started
-
-##### 2. Installation
-
-##### 3. Usage
-
-##### 4. Settings
-
-##### 5. Events
+- [Getting Started](#gettingstarted)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Input JSON Format](#inputjsonformat)
+- [Settings](#settings)
+- [Events](#events)
+- [Run locally](#runlocally)
+- [Change Logs](#changelogs)
 
 ## Getting Started
 
@@ -23,6 +22,7 @@ Angular 8 Cascading Dropdown Component for web applications. Dynamic and easy to
   `npm install ng-cascading-dropdown-lib`
 
 ### Demo Url
+
 https://swappea.github.io/ng-cascading-dropdown-lib/
 
 ### Usage
@@ -151,11 +151,16 @@ Add the following component tag in you template
   [inputCascadingData]="defaultTestData"
   [defaultSelectionData]="defaultDropdownData"
   [showDefaultSelection]="true"
+  [showHorizontal]="true"
   (notifyDropDownValue)="notifyDropDownValue($event)"
   (notifyFinalDropDownValue)="notifyFinalDropDownValue($event)"
 >
 </ng-cascading-dropdown>
 ```
+
+### Input JSON Format
+
+- Expected JSON format is flat json heirarchy with parent and child relation maintained using parentGroupID.
 
 ### Settings
 
@@ -167,6 +172,7 @@ The following list of settings are supported by the component. Configure the set
 | defaultSelectionData | Array   | Text to be show in the dropdown, when no items are selected. | [ ]           |
 | showDefaultSelection | Boolean | Show the default text for Dropdown                           | false         |
 | disableDropdown      | Boolean | Disable the Cascading Dropdown                               | false         |
+| showHorizontal       | Boolean | Show Cascading Dropdowns as horizontal or vertical           | true          |
 
 ### Events
 
@@ -182,3 +188,10 @@ The following list of settings are supported by the component. Configure the set
 - Run `ng serve` for a dev server
 - Navigate to `http://localhost:4200/`
   The app will automatically reload if you change any of the source files.
+
+## Change Logs
+
+#### v1.1.0
+
+- Added input option to show cascading dropdown as horizontal or vertical. showHorizontal flag is used.
+- Removed unused class.

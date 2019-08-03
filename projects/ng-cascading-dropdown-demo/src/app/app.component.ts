@@ -87,6 +87,8 @@ export class AppComponent implements OnInit {
     'Select City',
   ];
 
+  finalName = '';
+  finalVName = '';
   constructor() {
 
   }
@@ -96,10 +98,20 @@ export class AppComponent implements OnInit {
   }
 
   notifyFinalDropDownValue(event) {
+    this.finalName = event.grpName;
     console.log('FINAL VALUE', event);
   }
 
   notifyDropDownValue(event) {
+    console.log('ALL SELECTIONS', event);
+  }
+
+  notifyVFinalDropDownValue(event) {
+    this.finalVName = event.grpName;
+    console.log('FINAL VALUE', event);
+  }
+
+  notifyVDropDownValue(event) {
     console.log('ALL SELECTIONS', event);
   }
 }

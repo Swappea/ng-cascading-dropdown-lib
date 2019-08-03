@@ -34,6 +34,9 @@ export class NgCascadingDropdownLibComponent implements OnInit {
   // Show Default Selection
   @Input() showDefaultSelection = false;
 
+  // Show Horizontal dropdown or Vertical dropdown
+  @Input() showHorizontal = true;
+
   // Notify the final dropdown value selected
   @Output() notifyFinalDropDownValue = new EventEmitter();
 

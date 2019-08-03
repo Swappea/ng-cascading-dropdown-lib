@@ -1,7 +1,7 @@
 <ng-container *ngIf="dropDownCounter.length > 0">
     <div class="parent-container">
-        <div *ngFor="let dropDownData of dropDownCounter; let i =index;" class="dropdown-container">
-            <select [disabled]="disableDropdown" name="dropdown" class="w-100" [ngModel]="dropdownValue[i]"
+        <div *ngFor="let dropDownData of dropDownCounter; let i =index;" [ngClass]="showHorizontal ? 'dropdown-container-horizontal' : 'dropdown-container-vertical'">
+            <select [disabled]="disableDropdown" name="dropdown" [ngModel]="dropdownValue[i]" [ngClass]="showHorizontal ? 'select-horizontal' : 'select-vertical'"
                 (ngModelChange)="onDropdownChange($event, i)">
                 <ng-container *ngIf="showDefaultSelection">
                     <option value="default">
